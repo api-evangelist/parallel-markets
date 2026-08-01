@@ -1,0 +1,31 @@
+# Parallel Markets
+
+> Parallel Markets (an iCapital company) provides reusable financial identity: investor accreditation (506(c)), KYC/KYB, AML and sanctions/risk monitoring, and identity verification for investment advisors, asset managers, brokers, and fundraising platforms. Partners integrate a client-side JavaScript flow plus a server-side REST API and signed webhooks.
+
+## APIs
+- [Server API (v2, current)](https://developer.parallelmarkets.com/docs/server): REST/JSON API at https://api.parallelmarkets.com, Bearer API-key auth.
+- [Case Management API](https://developer.parallelmarkets.com/docs/server/case-management-api/introduction): records, accreditations, risk-matches, statuses, comments, files, requirements.
+- [JavaScript SDK](https://developer.parallelmarkets.com/docs/javascript): embeddable accreditation/KYC/KYB onboarding flow (Passport).
+- [Webhooks](https://developer.parallelmarkets.com/docs/webhooks): signed event notifications for accreditation, identity, risk-monitoring, and record events.
+
+## Auth
+- v2 Server API: HTTP Bearer API key (Authorization: Bearer {apiKey}).
+- v1 / JavaScript SDK: OAuth2 authorization-code (https://api.parallelmarkets.com/v1/oauth/authorize); scopes: profile, accreditation_status, identity, blockchain.
+
+## Docs
+- [Developer Documentation](https://developer.parallelmarkets.com/)
+- [Sandbox Quickstart](https://developer.parallelmarkets.com/docs/sandbox-quickstart)
+- [Errors](https://developer.parallelmarkets.com/docs/server/errors)
+- [Changelog](https://developer.parallelmarkets.com/docs/changelog)
+- [API Status](https://status.parallelmarkets.com)
+
+## Repo artifacts
+- [Authentication](authentication/parallel-markets-authentication.yml)
+- [OAuth Scopes](scopes/parallel-markets-scopes.yml)
+- [Error catalog](errors/parallel-markets-problem-types.yml)
+- [Webhook catalog](asyncapi/parallel-markets-webhooks.yml)
+- [Conventions](conventions/parallel-markets-conventions.yml)
+- [Lifecycle](lifecycle/parallel-markets-lifecycle.yml)
+- [Changelog](changelog/parallel-markets-changelog.yml)
+- [Packages / SDKs](packages/parallel-markets-packages.yml)
+- [Data model](data-model/parallel-markets-data-model.yml)

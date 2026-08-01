@@ -1,0 +1,61 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.parallelmarkets.com/docs/webhooks/webhook-events
+spec_type: Webhooks
+delivery:
+  transport: https-post
+  signed: true
+  signature_docs: https://developer.parallelmarkets.com/docs/webhooks/signature-verification
+payload_shape:
+  entity: { id: string, type: individual|business }
+  event: string
+  scope: string|null
+events:
+- scope: accreditation_status
+  event: data_update
+  description: A change in an entity's accreditation status.
+- scope: accreditation_status
+  event: access_revocation_scheduled
+  description: Access revocation has been scheduled and API access will expire.
+- scope: identity
+  event: data_update
+  description: New identity information has been submitted for the entity.
+- scope: identity
+  event: access_revocation_scheduled
+  description: Access revocation to ongoing user/business updates has been scheduled.
+- scope: identity
+  event: adverse_media_risk_monitor_match
+  description: Adverse-media risk monitor match found.
+- scope: identity
+  event: currently_sanctioned_risk_monitor_match
+  description: Currently-sanctioned risk monitor match found.
+- scope: identity
+  event: disqualified_director_risk_monitor_match
+  description: Disqualified-director risk monitor match found.
+- scope: identity
+  event: financial_regulator_risk_monitor_match
+  description: Financial-regulator risk monitor match found.
+- scope: identity
+  event: insolvent_risk_monitor_match
+  description: Insolvent risk monitor match found.
+- scope: identity
+  event: law_enforcement_risk_monitor_match
+  description: Law-enforcement risk monitor match found.
+- scope: identity
+  event: pep_risk_monitor_match
+  description: Politically-exposed-person (PEP) risk monitor match found.
+- scope: identity
+  event: risk_monitor_match_resolved
+  description: A previously reported risk monitor match has been resolved.
+- scope: identity
+  event: risk_monitoring_screen_complete
+  description: A risk-monitoring screen has completed.
+- scope: null
+  event: record_status_change
+  description: A case-management record changed status.
+- scope: null
+  event: record_archived
+  description: A case-management record was archived.
+- scope: null
+  event: record_unarchived
+  description: A case-management record was unarchived.

@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.parallelmarkets.com/docs/server/api-keys
+docs: https://developer.parallelmarkets.com/docs/server/api-keys
+summary:
+  types: [http, oauth2]
+  api_key_in: [header]
+  oauth2_flows: [authorizationCode]
+schemes:
+- name: apiKeyBearer
+  type: http
+  scheme: bearer
+  location: header
+  header: Authorization
+  format: "Bearer {apiKey}"
+  used_by: Server API / Case Management API (v2, current)
+  notes: >-
+    API keys are created in the Parallel dashboard (app.parallelmarkets.com or
+    demo.parallelmarkets.com) under Settings > Integrations & Exports by admin or
+    controller roles. The full key is shown once at creation; only the Key ID
+    prefix remains visible afterward.
+- name: oauth2AuthorizationCode
+  type: oauth2
+  flow: authorizationCode
+  authorizationUrl: https://api.parallelmarkets.com/v1/oauth/authorize
+  tokenUrl: https://api.parallelmarkets.com/v1/oauth/token
+  used_by: v1 legacy OAuth flow + JavaScript SDK Passport authorization
+  scopes: [profile, accreditation_status, identity, blockchain]
+  notes: >-
+    OAuth2 authorization-code flow (registered client_id/client_secret) used by the
+    v1 Server API and the client-side JavaScript SDK / Passport handoff. HTTPS only;
+    plain HTTP connections are refused.

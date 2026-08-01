@@ -1,0 +1,19 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.parallelmarkets.com/docs/sandbox-quickstart
+environments:
+- name: demo / sandbox
+  dashboard: https://demo.parallelmarkets.com
+  purpose: Test environment for creating API keys and exercising the flow without live data.
+- name: production
+  dashboard: https://app.parallelmarkets.com
+  api_host: https://api.parallelmarkets.com
+test_data:
+- technique: randomized risk-match generation
+  detail: >-
+    Use the `random` keyword in the Sandbox Quickstart to generate randomized risk
+    monitor matches for testing risk-monitoring / adverse-media / sanctions flows.
+notes: >-
+  Sandbox uses the demo dashboard to issue test API keys and simulate accreditation,
+  KYC/KYB, identity, and risk-monitoring outcomes. No fixed test card / bank numbers
+  are published (this is an identity/accreditation API, not a card acquirer).

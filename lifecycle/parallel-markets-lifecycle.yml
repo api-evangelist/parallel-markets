@@ -1,0 +1,18 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.parallelmarkets.com/docs/server
+versioning:
+  scheme: uri-path / docs-track
+  current: v2
+  legacy: v1
+  docs: https://developer.parallelmarkets.com/docs/server
+  notes: Docs expose Current (v2.x), Legacy (v1.x), and Next (in development) tracks. v1 remains available but is superseded by v2.
+deprecation:
+  policy_url: https://developer.parallelmarkets.com/docs/server/access-revocation
+  sunset_header: false
+  notes: >-
+    Access to ongoing updates can be revoked/scheduled to expire (access-revocation
+    flow); webhook events access_revocation_scheduled announce upcoming API-access
+    expiry. v1 is the legacy track superseded by v2.
+status_page: https://status.parallelmarkets.com
+changelog: https://developer.parallelmarkets.com/docs/changelog

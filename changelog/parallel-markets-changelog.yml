@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.parallelmarkets.com/docs/changelog
+scheme: dated-monthly
+current_version: v2
+entries:
+- date: '2026-06'
+  highlights:
+  - Added domicile_location to business record endpoints.
+  - Added list CDD requirements endpoint.
+  - Added overlay event handling documentation and pre-filling user data guide.
+  - Added user-account requirement section and fields-pre-filled-by-scope table.
+- date: '2026-04'
+  highlights:
+  - Fixed unsubmitted typo and added missing canceled status to accreditations.
+  - Added missing secondary_citizenship_countries and source fields to individual records.
+  - Added missing fields to business records.
+- date: '2025-12'
+  highlights:
+  - Add new Business Types to Business Profile.
+- date: '2025-09'
+  highlights:
+  - Add rejected_at and canceled_at timestamps to list accreditations.
+- date: '2025-08'
+  highlights:
+  - Add randomized risk match generation via the random keyword in Sandbox Quickstart.
+- date: '2025-07'
+  highlights:
+  - Add gender and name_suffix fields to get/create/update record for individual records.
+- date: '2025-06'
+  highlights:
+  - Add optional email query param to list individuals endpoint.
+- date: '2025-04'
+  highlights:
+  - Added reviewer_note to accreditations and pep_tier field to risk match review details.
+- date: '2025-01'
+  highlights:
+  - Add record comments for individual and business records (list and add-comment endpoints).
+- date: '2024-12'
+  highlights:
+  - Add record traits for individual and business records.

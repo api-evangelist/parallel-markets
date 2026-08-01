@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.parallelmarkets.com/docs/1.x/server/scopes
+docs: https://developer.parallelmarkets.com/docs/1.x/server/scopes
+schemes:
+- name: oauth2AuthorizationCode
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.parallelmarkets.com/v1/oauth/authorize
+    tokenUrl: https://api.parallelmarkets.com/v1/oauth/token
+scopes:
+- scope: profile
+  description: >-
+    Access to the Profile API and basic information about an individual or business.
+    This scope should always be included.
+  flows: [authorizationCode]
+- scope: accreditation_status
+  description: >-
+    Access to the Accreditations API and the full accreditation history for an
+    individual or business.
+  flows: [authorizationCode]
+- scope: identity
+  description: >-
+    Access to the Identity API and detailed KYC/AML data, contact information,
+    identity documents, and Taxpayer Identification Certification (W-9).
+  flows: [authorizationCode]
+- scope: blockchain
+  description: >-
+    Access to the Blockchain API and information about confirmed wallets and
+    Parallel Identity (PID) Token ownership.
+  flows: [authorizationCode]

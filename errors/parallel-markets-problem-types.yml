@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.parallelmarkets.com/docs/server/errors
+format: json-error-key
+envelope:
+  content_type: application/json
+  shape: '{ "error": "<description of the error>" }'
+  field: error
+problems:
+- status: 400
+  title: Bad Request
+  description: Your request is invalid.
+- status: 401
+  title: Unauthorized
+  description: Your API credentials are not recognized (your client/secret or token is wrong).
+- status: 403
+  title: Forbidden
+  description: Your credentials are recognized, but you don't have permissions to do what you're trying to do.
+- status: 404
+  title: Not Found
+  description: The specified object could not be found.
+- status: 405
+  title: Method Not Allowed
+  description: You tried to access with an invalid method.
+- status: 406
+  title: Not Acceptable
+  description: You requested a format that isn't json.
+- status: 429
+  title: Too Many Requests
+  description: Rate limit exceeded (maximum 100 requests per second to any endpoint).
+- status: 500
+  title: Internal Server Error
+  description: We had a problem with our server. Try again later.
+- status: 503
+  title: Service Unavailable
+  description: We're temporarily offline for maintenance.

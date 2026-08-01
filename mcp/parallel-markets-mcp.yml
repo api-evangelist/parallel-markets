@@ -1,0 +1,57 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: https://developer.parallelmarkets.com/docs/server (documented Case Management API operations)
+notes: >-
+  No official hosted MCP server was found. Candidate tool list derived from the
+  documented Case Management API operations; each maps to a public docs operation
+  (no machine-readable OpenAPI was retrievable to bind operationIds).
+server:
+  name: parallel-markets
+  transport: http
+tools:
+- name: list_records
+  description: List individual/business case-management records.
+  source_operation: docs/server/case-management-api/records/list
+- name: get_record
+  description: Get a single case-management record.
+  source_operation: docs/server/case-management-api/records/get
+- name: create_record
+  description: Create an individual or business record.
+  source_operation: docs/server/case-management-api/records/create
+- name: update_record
+  description: Update a record.
+  source_operation: docs/server/case-management-api/records/update
+- name: archive_record
+  description: Archive a record.
+  source_operation: docs/server/case-management-api/records/archive
+- name: unarchive_record
+  description: Unarchive a record.
+  source_operation: docs/server/case-management-api/records/unarchive
+- name: list_accreditations
+  description: List accreditations for records.
+  source_operation: docs/server/case-management-api/accreditations/list
+- name: list_risk_matches
+  description: List risk-monitoring matches.
+  source_operation: docs/server/case-management-api/risk-matches/list
+- name: get_risk_match
+  description: Get a risk-monitoring match.
+  source_operation: docs/server/case-management-api/risk-matches/get
+- name: update_risk_match
+  description: Update/resolve a risk-monitoring match.
+  source_operation: docs/server/case-management-api/risk-matches/update
+- name: list_comments
+  description: List comments on a record.
+  source_operation: docs/server/case-management-api/comments/list
+- name: create_comment
+  description: Add a comment to a record.
+  source_operation: docs/server/case-management-api/comments/create
+- name: list_files
+  description: List files attached to a record.
+  source_operation: docs/server/case-management-api/files/list
+- name: create_file
+  description: Attach a file to a record.
+  source_operation: docs/server/case-management-api/files/create
+- name: list_requirements
+  description: List CDD requirements for a record.
+  source_operation: docs/server/case-management-api/requirements/list

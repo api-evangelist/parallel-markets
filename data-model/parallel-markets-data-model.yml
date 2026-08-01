@@ -1,0 +1,45 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.parallelmarkets.com/docs/server/data-structures
+notes: >-
+  Entity graph reconstructed from the documented Case Management and v1 data
+  structures (no machine-readable OpenAPI was retrievable). Entities and
+  relationships reflect the public object reference.
+entities:
+- name: entity
+  description: An individual or a business subject (the root subject of identity/accreditation).
+  type_values: [individual, business]
+- name: record
+  description: A case-management record for an individual or business (KYC/KYB case).
+  relationships:
+  - { kind: belongs_to, target: entity, via: entity }
+  - { kind: has_many, target: accreditation, via: record }
+  - { kind: has_many, target: risk_match, via: record }
+  - { kind: has_many, target: status, via: record }
+  - { kind: has_many, target: comment, via: record }
+  - { kind: has_many, target: file, via: record }
+  - { kind: has_many, target: change, via: record }
+- name: accreditation
+  description: An accreditation determination and history for an entity (506(c)).
+  relationships:
+  - { kind: belongs_to, target: entity, via: entity }
+- name: risk_match
+  description: A risk-monitoring match (adverse media, sanctions, PEP, law enforcement, etc.) with resolutions.
+  relationships:
+  - { kind: belongs_to, target: record, via: record }
+- name: status
+  description: A status entry in a record's lifecycle.
+  relationships:
+  - { kind: belongs_to, target: record, via: record }
+- name: comment
+  description: A reviewer comment on a record.
+  relationships:
+  - { kind: belongs_to, target: record, via: record }
+- name: file
+  description: A document/file attached to a record (identity documents, W-9, etc.).
+  relationships:
+  - { kind: belongs_to, target: record, via: record }
+- name: requirement
+  description: A CDD (customer due diligence) requirement associated with a record.
+  relationships:
+  - { kind: belongs_to, target: record, via: record }

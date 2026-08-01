@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/parallel-markets + npm/rubygems registries
+packages:
+- language: javascript
+  registry: npm
+  name: "@parallelmarkets/react"
+  version: 2.1.2
+  url: https://www.npmjs.com/package/@parallelmarkets/react
+  install: npm install @parallelmarkets/react
+  repository: https://github.com/parallel-markets/parallel-js
+  license: MIT
+  description: Parallel Markets React SDK for embedding the identity/accreditation flow.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@parallelmarkets/vanilla"
+  version: 2.1.2
+  url: https://www.npmjs.com/package/@parallelmarkets/vanilla
+  install: npm install @parallelmarkets/vanilla
+  repository: https://github.com/parallel-markets/parallel-js
+  license: MIT
+  description: Parallel Markets JavaScript SDK loading utility (vanilla loader for the client-side flow).
+  official: true
+- language: ruby
+  registry: rubygems
+  name: omniauth-parallelmarkets
+  version: 0.6.0
+  url: https://rubygems.org/gems/omniauth-parallelmarkets
+  install: gem install omniauth-parallelmarkets
+  repository: https://github.com/parallel-markets/omniauth-parallelmarkets
+  license: MIT
+  description: Parallel Markets OAuth2 strategy for OmniAuth (archived, v1 OAuth flow).
+  official: true
+  archived: true

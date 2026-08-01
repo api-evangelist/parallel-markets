@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.parallelmarkets.com/docs/javascript
+families:
+- family: JavaScript SDK (client-side flow)
+  description: >-
+    Embeddable client-side flow that initializes an accreditation, KYC, KYB, or
+    general onboarding process by collecting information from users on the partner's
+    site (overlay or embedded flow) and returning a Passport identity/authorization.
+  loaders:
+  - name: "@parallelmarkets/vanilla"
+    url: https://www.npmjs.com/package/@parallelmarkets/vanilla
+    detail: Vanilla JavaScript loader for the Parallel SDK.
+  - name: "@parallelmarkets/react"
+    url: https://www.npmjs.com/package/@parallelmarkets/react
+    detail: React components/hooks wrapping the SDK.
+  docs:
+  - https://developer.parallelmarkets.com/docs/javascript/loading/react
+  - https://developer.parallelmarkets.com/docs/javascript/loading/vanilla
+  - https://developer.parallelmarkets.com/docs/javascript/configuration
+  - https://developer.parallelmarkets.com/docs/javascript/events

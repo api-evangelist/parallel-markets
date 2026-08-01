@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.parallelmarkets.com/docs/server
+authentication:
+  style: bearer-token
+  detail: >-
+    v2 Server / Case Management API uses an API key as an HTTP Bearer token
+    (Authorization: Bearer {apiKey}). v1 and the JavaScript SDK use OAuth2
+    authorization-code with scopes profile / accreditation_status / identity /
+    blockchain.
+  ref: authentication/parallel-markets-authentication.yml
+idempotency:
+  supported: false
+  notes: >-
+    No documented idempotency-key header. Case Management record creation is
+    handled via explicit create/update/archive/unarchive operations rather than an
+    idempotency contract.
+pagination:
+  style: unspecified-list
+  detail: >-
+    List endpoints (e.g. list records, list accreditations) accept optional filter
+    query params such as email; a formal cursor/offset envelope is not documented
+    in the public reference.
+error_envelope:
+  content_type: application/json
+  shape: '{ "error": "<description>" }'
+  ref: errors/parallel-markets-problem-types.yml
+rate_limiting:
+  limit: 100 requests per second to any endpoint
+  exceeded_status: 429
+  ref: null
+versioning:
+  scheme: uri-path
+  current: v2
+  legacy: v1
+  detail: API version is carried in the docs track (Current v2.x / Legacy v1.x); v1 OAuth endpoints live under /v1/.
+  ref: lifecycle/parallel-markets-lifecycle.yml
+webhooks:
+  supported: true
+  detail: Signed webhooks notify partner systems of accreditation, identity, risk-monitoring, and case-management record events.
+  ref: asyncapi/parallel-markets-webhooks.yml

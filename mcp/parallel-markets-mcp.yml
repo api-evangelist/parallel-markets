@@ -2,10 +2,9 @@ generated: '2026-07-20'
 method: derived
 status: candidate
 source: https://developer.parallelmarkets.com/docs/server (documented Case Management API operations)
-notes: >-
-  No official hosted MCP server was found. Candidate tool list derived from the
-  documented Case Management API operations; each maps to a public docs operation
-  (no machine-readable OpenAPI was retrievable to bind operationIds).
+notes: No official hosted MCP server was found. Candidate tool list derived from the documented Case Management
+  API operations; each maps to a public docs operation (no machine-readable OpenAPI was retrievable to
+  bind operationIds).
 server:
   name: parallel-markets
   transport: http
@@ -55,3 +54,9 @@ tools:
 - name: list_requirements
   description: List CDD requirements for a record.
   source_operation: docs/server/case-management-api/requirements/list
+deployment:
+  mode: none
+  verified: derived
+  tools: 15
+  checked: '2026-08-12'
+  source: catalog MCP census
